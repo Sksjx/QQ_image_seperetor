@@ -12,14 +12,14 @@ from math import ceil
 import cv2
 import shutil
 import re
-import xpinyin
+from xpinyin import Pinyin
 
 import tkinter
 import multiprocessing
 from retinaface import RetinaFace
 from collections import Counter
 
-p = xpinyin.Pinyin()
+p = Pinyin()
 class BasicConv2d(nn.Module):
     def __init__(self, in_channels, out_channels, **kwargs):
         super(BasicConv2d, self).__init__()
@@ -496,7 +496,7 @@ class main_window(object):
         self.current_num = multiprocessing.Value("L",0)
         self.do_stop = multiprocessing.Value("L",0)
     def StringVars(self):
-        self.core_number = tkinter.StringVar()
+        self.core_number = tkinter.StringVar(value="1")
         self.text_in = tkinter.StringVar()
         self.text_out = tkinter.StringVar()
         self.text_time = tkinter.StringVar()
@@ -519,7 +519,7 @@ class main_window(object):
         self.Dectect_entropy = tkinter.BooleanVar()
         self.use_gpu = tkinter.BooleanVar()
     def OptionMenus(self):
-        self.combox_core = tkinter.OptionMenu(self.frame_checkbutton,self.core_number,*[i for i in range(1,int(multiprocessing.cpu_count()/2))])
+        self.combox_core = tkinter.OptionMenu(self.frame_checkbutton,self.core_number,*[i for i in range(1,int(min(10,multiprocessing.cpu_count()/2)))])
     def Progressbars(self):
         self.progressbarTime = tkinter.ttk.Progressbar(self.root,length=400,maximum=400)
     def get_folders(self):
