@@ -1,0 +1,11 @@
+numba
+labelme
+tensorflow
+opencv-python
+numpy
+torch
+matplotlib 
+albumentations
+tensorflow-gpu
+retinaface
+xpinyin
