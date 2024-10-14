@@ -1,23 +1,18 @@
 这里是[中文版本](https://github.com/Sksjx/QQ_image_seperetor/blob/main/README.md)
 
-Have you noticed that in the computer's QQ program, there are numerous randomly named folders located in the directory '../AccountName/AccountName/Image/Group2,' and each folder contains randomly named images?
+Have you ever noticed that there are a lot of randomly-named folders in your computer's qq save directory, “.../Tencent Files/Your QQ Number/Image/Group2”, where a large number of randomly named folders are stored, and each folder contains randomly named pictures?
 
-This program is designed for people who don't have a 4090 to run fixed models. It will separate the useless parts from the QQ images and keeps most of the hentai ones.
+This program is designed to separate the useless parts from the qq cache images, leaving most of the hentai images.
 
-Here are the steps:
+The specific operation is as follows: 
+1. In your file manager, please find “.... /Tencent Files/your QQ number/Image/Group2”, in the upper right corner of the search box, enter the English period ‘.’ and click Search
 
-1. In your file manager, locate '../AccountName/AccountName/Image/Group2' and enter an English period '.' in the search bar in the upper right corner, then click 'search.'
+2. When the search is finished, slide the right scroll bar from top to bottom, find the first picture and left click once, then use the mouse to drag the right scroll bar to the bottom picture, shift+left click once.
 
-2. After the search is complete, scroll down the right scrollbar from top to bottom to find the first image. Click on it once, then drag the right scrollbar to the bottom and press Shift+Left Click on the last image.
+3. If the second step of the operation is correct, at this time you should have selected all the pictures, press ctrl + x or press ctrl + c , and then paste into another folder
 
-3. If you've done the second step correctly, you should have selected all the images in the folder. Cut them with Ctrl+X or copy them with Ctrl+C, then paste them into another folder.
+4. Open the program, set the input folder to the folder you just copied file to, and then set the output folder to any place you like. Select core numbers and options on leftside, then start running the program.
 
-4. Open the program and set the input folder to the folder where you had just pasted the files. Set the output folder to any location you like. On the left, select the number of CPU cores you want to use, and then you can start the process.
+Note: The more cores you selected, the more computer resources consumed, it is recommended to start from 4 cores. Image entropy function will consume a huge amount of time, about a single picture takes 1min40s, it is not recommended to use this function currently!
 
-Note: The more CPU cores you select, the more computer resources it will consume.
-
-For example, on the author's i7 13700k, selecting 20 cores caused the screen to go black and the program to crash. So it's recommended to choose a suitable number of cores. You can change the number of cores during the program's execution.
-
-For not known reason, when calculating image entropy, running with a single process and 16 processes shows almost the same efficiency. 
-
-If anyone knowledgeable could provide some guidance on where I went wrong with the multiprocessing, i would appreciate a lot.
+Failed useing pyinstaller to packa the program, looking for help!
