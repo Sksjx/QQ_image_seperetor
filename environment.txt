@@ -1,11 +1,5 @@
-numba
-labelme
-tensorflow
-opencv-python
-numpy
+easyocr
 torch
-matplotlib 
-albumentations
-tensorflow-gpu
 retinaface
 xpinyin
+jieba
