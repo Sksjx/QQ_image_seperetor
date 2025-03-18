@@ -1,9 +1,5 @@
-import multiprocessing.process
 import os
 import time
-import tkinter.filedialog
-import tkinter.ttk
-import easyocr.recognition
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
